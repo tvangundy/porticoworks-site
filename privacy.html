@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy policy for the Portico mobile app and Portico Works services.">
+    <meta name="theme-color" content="#050505">
+    <title>Privacy — Portico Works</title>
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Sora:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Portico Works home">
+        <img class="brand-logo" src="logo.png" width="36" height="36" alt="">
+        <span>Portico Works</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="/#about">About</a>
+        <a href="/#studio">Studio</a>
+        <a class="nav-contact" href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="legal-page" id="top">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy policy</h1>
+      <p class="legal-lede">Last updated: 15 August 2026. This policy covers the <strong>Portico</strong> mobile app (Android package <code>com.porticoworks.mobile</code>) and related Portico Works services at <code>porticoworks.dev</code>.</p>
+
+      <section aria-labelledby="who-title">
+        <h2 id="who-title">Who we are</h2>
+        <p>Portico Works, LLC (“Portico Works,” “we,” “us”) operates the Portico invitee access app and related cloud services. Contact: <a class="text-link" href="mailto:hello@porticoworks.dev">hello@porticoworks.dev</a>.</p>
+      </section>
+
+      <section aria-labelledby="what-title">
+        <h2 id="what-title">What Portico does</h2>
+        <p>Portico helps invited people reach shared home apps. After you sign in and accept an invite, the app can set up a private encrypted tunnel on your device and open granted apps in an in-app browser. It is not a general-purpose VPN product.</p>
+      </section>
+
+      <section aria-labelledby="collect-title">
+        <h2 id="collect-title">Information we collect</h2>
+        <ul>
+          <li><strong>Account</strong> — email and authentication details needed to sign in to the Portico / PME service you use.</li>
+          <li><strong>Invite and access</strong> — invite identifiers, which shared apps you are granted, and connection status needed to provision access.</li>
+          <li><strong>Device / tunnel</strong> — a WireGuard public key you generate on device (we receive the public key only), tunnel endpoints, and diagnostics you or a host may need for support.</li>
+          <li><strong>App usage</strong> — basic operational logs (errors, connectivity) to keep the service reliable. We do not sell personal information.</li>
+        </ul>
+        <p>Private tunnel keys stay on your device. We do not receive your private key.</p>
+      </section>
+
+      <section aria-labelledby="use-title">
+        <h2 id="use-title">How we use information</h2>
+        <ul>
+          <li>Authenticate you and complete invites.</li>
+          <li>Provision and maintain your private connection to the host network you were invited to.</li>
+          <li>Operate, secure, and improve the app and related services.</li>
+          <li>Respond to support requests you send us.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="share-title">
+        <h2 id="share-title">Sharing</h2>
+        <p>We share data only as needed to run the service: with the host who invited you (within that invite’s scope), with infrastructure providers that process data on our behalf, or when required by law. We do not sell personal data or share it for cross-context advertising.</p>
+      </section>
+
+      <section aria-labelledby="vpn-title">
+        <h2 id="vpn-title">Network / VPN permission</h2>
+        <p>On Android, Portico uses the system VPN capability so traffic for your invite can use an encrypted tunnel. The OS shows a VPN indicator while the tunnel is on. You must consent to the system VPN prompt. Tunnel traffic is encrypted between your device and the configured endpoint. You can disconnect in the app or revoke VPN permission in system settings.</p>
+      </section>
+
+      <section aria-labelledby="retain-title">
+        <h2 id="retain-title">Retention</h2>
+        <p>We keep account and invite records while your account or invite remains active, and for a reasonable period afterward for security and legal obligations. You may request deletion by emailing <a class="text-link" href="mailto:hello@porticoworks.dev">hello@porticoworks.dev</a>.</p>
+      </section>
+
+      <section aria-labelledby="rights-title">
+        <h2 id="rights-title">Your choices</h2>
+        <p>You can disconnect the tunnel, uninstall the app, or ask us to delete your account data. Hosts control who is invited to their home network.</p>
+      </section>
+
+      <section aria-labelledby="changes-title">
+        <h2 id="changes-title">Changes</h2>
+        <p>We may update this policy. The “Last updated” date at the top will change when we do. Continued use of the app after an update means you accept the revised policy.</p>
+      </section>
+
+      <section aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p><a class="text-link" href="mailto:hello@porticoworks.dev">hello@porticoworks.dev</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark wordmark-footer" href="/">
+        <img class="brand-logo" src="logo.png" width="32" height="32" alt="">
+        <span>Portico Works</span>
+      </a>
+      <p>© <span id="year">2026</span> Portico Works, LLC.</p>
+      <p><a class="text-link" href="/privacy">Privacy</a></p>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

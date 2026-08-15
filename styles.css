@@ -279,6 +279,43 @@ footer {
 footer p { margin: 0; }
 .wordmark-footer { color: var(--ink); }
 
+.legal-page {
+  max-width: 720px;
+  margin-inline: auto;
+  padding: 72px 38px 96px;
+}
+.legal-page h1 {
+  margin: 0 0 18px;
+  font-family: "Bricolage Grotesque", Sora, sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+.legal-lede {
+  margin: 0 0 48px;
+  color: var(--muted);
+}
+.legal-page section { margin-bottom: 36px; }
+.legal-page h2 {
+  margin: 0 0 12px;
+  font-family: "Bricolage Grotesque", Sora, sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: -.01em;
+}
+.legal-page p, .legal-page li {
+  color: var(--muted);
+}
+.legal-page ul {
+  padding-left: 1.2em;
+  margin: 0 0 12px;
+}
+.legal-page li { margin-bottom: 8px; }
+.legal-page code {
+  font-size: .9em;
+  color: var(--cyan);
+}
+.text-link { color: var(--green); text-underline-offset: 3px; }
+
 @media (max-width: 800px) {
   .site-header { min-height: 76px; padding-inline: 22px; }
   nav { gap: 15px; }
@@ -299,6 +336,7 @@ footer p { margin: 0; }
     opacity: .25;
   }
   footer { grid-template-columns: 1fr; gap: 18px; padding: 38px 22px; }
+  .legal-page { padding: 56px 22px 72px; }
 }
 
 @media (max-width: 500px) {
