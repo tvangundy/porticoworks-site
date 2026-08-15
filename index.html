@@ -11,6 +11,16 @@
     <meta property="og:url" content="https://porticoworks.dev/">
     <meta property="og:image" content="https://porticoworks.dev/logo.png">
     <title>Portico Works — New experiences with computers</title>
+    <script>
+      (function () {
+        var host = location.hostname.toLowerCase();
+        if (host === "delete-me.porticoworks.dev") {
+          location.replace("/delete-me.html");
+        } else if (host === "delete-my-data.porticoworks.dev") {
+          location.replace("/delete-my-data.html");
+        }
+      })();
+    </script>
     <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="favicon-16.png" type="image/png" sizes="16x16">
     <link rel="icon" href="favicon.png" type="image/png">
