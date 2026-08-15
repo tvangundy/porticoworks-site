@@ -7,7 +7,8 @@ The product experience lives at [web.porticoworks.dev](https://web.porticoworks.
 ## Update the site
 
 - Edit page wording and links in `index.html`.
-- Edit colors and layout in `styles.css`.
+- Edit colors and layout in `styles.css` (brand greens/cyans match `logo.png`).
+- Brand mark: `logo.png` (header, hero, product card). Tab icons: `favicon-16.png`, `favicon-32.png`, `favicon.png`, `apple-touch-icon.png`.
 - Contact address: `hello@porticoworks.dev` (change in `index.html` if needed).
 
 No build tools or dependencies. Open `index.html` in a browser to preview.
