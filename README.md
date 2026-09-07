@@ -2,7 +2,7 @@
 
 Static site for [porticoworks.dev](https://porticoworks.dev)—the studio home for Portico Works—hosted with GitHub Pages.
 
-The product experience lives at [web.porticoworks.dev](https://web.porticoworks.dev).
+The essay on why home data matters lives at [porticonow.com](https://porticonow.com). The product experience lives at [web.porticoworks.dev](https://web.porticoworks.dev).
 
 ## Update the site
 
