@@ -12,6 +12,7 @@ The essay on why home data matters lives at [porticonow.com](https://porticonow.
 - Brand mark: `logo.png` (header, hero, product card). Tab icons: `favicon-16.png`, `favicon-32.png`, `favicon.png`, `apple-touch-icon.png`.
 - Contact address: `hello@porticoworks.dev` (change in HTML files if needed).
 - Privacy policy (required for Google Play): [https://porticoworks.dev/privacy](https://porticoworks.dev/privacy).
+- Invite deep links (Portico Mobile Camera → app): `.well-known/apple-app-site-association` and `.well-known/assetlinks.json` — keep in sync with **ws-website** / **porticonow-site**.
 
 No build tools or dependencies. Open `index.html` in a browser to preview.
 

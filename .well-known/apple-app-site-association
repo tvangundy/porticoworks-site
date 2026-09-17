@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "U53K795KUS.com.porticoworks.mobile",
+        "paths": ["/login", "/login/*"]
+      }
+    ]
+  }
+}

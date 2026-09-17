@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.porticoworks.mobile",
+      "sha256_cert_fingerprints": [
+        "3A:18:45:60:14:F5:A5:1A:69:E8:28:D2:5D:71:BB:C1:98:22:DA:C1:57:36:1D:76:EA:14:55:55:A3:4E:C9:F6"
+      ]
+    }
+  }
+]
