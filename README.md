@@ -14,7 +14,7 @@ The essay on why home data matters lives at [porticonow.com](https://porticonow.
 - Privacy policy (required for Google Play): [https://porticoworks.dev/privacy](https://porticoworks.dev/privacy).
 - Invite deep links (Portico Mobile Camera → app): `.well-known/apple-app-site-association` and `.well-known/assetlinks.json` — keep in sync with **ws-website** / **porticonow-site**.
 
-No build tools or dependencies. Open `index.html` in a browser to preview.
+No build tools or dependencies. Preview with `task preview` (http://localhost:4323). Override the port with `task preview PORT=8080`.
 
 ## Publish on GitHub Pages
 
