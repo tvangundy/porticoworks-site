@@ -37,16 +37,16 @@ In GoDaddy: **My Products → Domains → porticoworks.dev → DNS**. Remove dom
 
 Do not add a wildcard (`*`) record. Leave MX and TXT (email) alone. Propagation can take up to 24 hours.
 
-## GoDaddy DNS for delete-me / delete-my-data
+## Cloudflare DNS for delete-me / delete-my-data
 
-These hosts are served by the **edge public cluster** website (same floating IP as `web`), not GitHub Pages. Add **A** records:
+The zone's nameservers are Cloudflare, so records added at GoDaddy have no effect. These hosts are served by the **edge public cluster** website (same origin as `web`), not GitHub Pages. They are managed by **portico-edge** `PORTICO_DNS_APPLY_CONFIRM=yes task portico:dns-apply` (prod stage), or by hand as proxied **A** records:
 
-| Type | Name | Value | TTL |
+| Type | Name | Value | Proxy |
 | --- | --- | --- | --- |
-| A | delete-me | 87.99.150.20 | 1 hour |
-| A | delete-my-data | 87.99.150.20 | 1 hour |
+| A | delete-me | 5.161.19.132 | Proxied |
+| A | delete-my-data | 5.161.19.132 | Proxied |
 
-(Use the current Edge floating IP if it differs.) TLS is covered by `*.porticoworks.dev` on the cluster. After DNS and `task public:deploy-website` (with a published image that includes the legal pages), open:
+(Origin is `workspace.control_plane_ip` in portico-edge `contexts/prod/values.yaml`.) TLS is covered by `*.porticoworks.dev` on the cluster. After DNS and `task public:deploy-website` (with a published image that includes the legal pages), open:
 
 - https://delete-me.porticoworks.dev/
 - https://delete-my-data.porticoworks.dev/
