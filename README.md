@@ -1,6 +1,6 @@
 # Portico Works website
 
-Static site for [porticoworks.dev](https://porticoworks.dev)—the studio home for Portico Works—hosted with GitHub Pages.
+Static site for [porticoworks.dev](https://porticoworks.dev)—the studio home for Portico Works—served from the edge public cluster (`task public:deploy-studio` in **portico-public**). `www.porticoworks.dev` redirects to the apex.
 
 The essay on why home data matters lives at [porticonow.com](https://porticonow.com). The product experience lives at [web.porticoworks.dev](https://web.porticoworks.dev).
 
@@ -16,26 +16,17 @@ The essay on why home data matters lives at [porticonow.com](https://porticonow.
 
 No build tools or dependencies. Preview with `task preview` (http://localhost:4323). Override the port with `task preview PORT=8080`.
 
-## Publish on GitHub Pages
+## Publish on the cluster
 
-1. Repository: `tvangundy/porticoworks-site`, branch `main`.
-2. **Settings → Pages** → Deploy from a branch → `main` / `/(root)`.
-3. **Custom domain:** `porticoworks.dev` (keep the `CNAME` file in the repo).
-4. After DNS is healthy, enable **Enforce HTTPS**.
+From **portico-public**, context `edge-public-cluster`:
 
-## GoDaddy DNS for porticoworks.dev
+```bash
+STUDIO_PUBLISH=1 task public:deploy-studio
+```
 
-In GoDaddy: **My Products → Domains → porticoworks.dev → DNS**. Remove domain-forwarding and conflicting `@` / `www` A or CNAME records, then add:
+That builds this directory as `ghcr.io/tvangundy/porticoworks-site:latest` and applies the `studio` HTTPRoute. TLS is the cluster wildcard certificate (`porticoworks.dev` and `*.porticoworks.dev`). DNS is a proxied Cloudflare A record for `@` and `www` at the edge floating IP (`task portico:dns-apply` in **portico-edge** prod).
 
-| Type | Name | Value | TTL |
-| --- | --- | --- | --- |
-| A | @ | 185.199.108.153 | 1 hour |
-| A | @ | 185.199.109.153 | 1 hour |
-| A | @ | 185.199.110.153 | 1 hour |
-| A | @ | 185.199.111.153 | 1 hour |
-| CNAME | www | tvangundy.github.io | 1 hour |
-
-Do not add a wildcard (`*`) record. Leave MX and TXT (email) alone. Propagation can take up to 24 hours.
+GitHub Pages is no longer the origin. The `CNAME` file can stay so a Pages build does not drop the repo's domain note; public DNS must not point at `185.199.108.153` or `tvangundy.github.io`.
 
 ## Cloudflare DNS for delete-me / delete-my-data
 
